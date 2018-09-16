@@ -32,9 +32,9 @@ node('master') {
         // Note the sonar properties are required and will be unique for each type of tests
         // e.g. onekey-automation-web, onekey-automation-ios, onekey-automation-android
         if (isUnix()) {
-            sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean test sonar:sonar  -Dtest=Runner -Dplatform=web -Denvironment=${params.environment} -Dgroup=${params.group} -Dbrowser=${params.browser} -Dsonar.host.url=https://build.milwaukeetool.com/sonar -Dsonar.projectKey=onekey-automation-web -Dsonar.projectName=onekey-automation-web"
+            sh "'${mvnHome}/bin/mvn' clean test -Dsurefire.suiteXmlFiles=./testng.xml"
         } else {
-            bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean test sonar:sonar  -Dtest=Runner -Dplatform=web -Denvironment=${params.environment} -Dgroup=${params.group} -Dbrowser=${params.browser} -Dsonar.host.url=https:\/\/build.milwaukeetool.com\/sonar -Dsonar.projectKey=onekey-automation-web -Dsonar.projectName=onekey-automation-web/)
+            bat(/"${mvnHome}\bin\mvn" clean test -Dsurefire.suiteXmlFiles=./testng.xml)
         }
     }
 /*    stage('Archive') {
