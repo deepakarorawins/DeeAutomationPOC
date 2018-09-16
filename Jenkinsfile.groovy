@@ -32,9 +32,9 @@ node('master') {
         // Note the sonar properties are required and will be unique for each type of tests
         // e.g. onekey-automation-web, onekey-automation-ios, onekey-automation-android
         if (isUnix()) {
-            sh "'${mvnHome}/bin/mvn' clean test -Dsurefire.suiteXmlFiles=./testng.xml"
+            sh "'${mvnHome}/bin/mvn' clean test "
         } else {
-            bat(/"${mvnHome}\bin\mvn" clean test -Dsurefire.suiteXmlFiles=./testng.xml)
+            bat(/"${mvnHome}\bin\mvn" clean test -Dsurefire.suiteXmlFiles=.\/testng.xml/)
         }
     }
 /*    stage('Archive') {
