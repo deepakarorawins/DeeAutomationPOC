@@ -25,7 +25,7 @@ node('master') {
         // Get the Maven tool.
         // ** NOTE: This 'M3' Maven tool is configured
         // **       in the global configuration.
-        mvnHome = tool 'maven_3_5_4'
+        mvnHome = tool 'M3'
     }
     stage('Build') {
         // Run the maven build
