@@ -1,5 +1,5 @@
 
-
+# basic file/folders to ignore in testng/maven/java project in eclipse.
 /.classpath
 /.project
 /.settings/
