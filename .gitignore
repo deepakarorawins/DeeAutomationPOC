@@ -1,0 +1,25 @@
+
+# basic file/folders to ignore in testng/maven/java project in eclipse.
+/.classpath
+/.project
+/.settings/
+/target/
+
+/bin/
+/test-output/
+/ExtentReport.html
+/logfile.log
+/logFinalStatus.log
+/apps/
+/drivers/
+/reportArchive/
+/screenshots/
+/webToolReports/
+/README.md
+/sonar-project.properties
+/extentReport.html
+/UML Class Diagram/UML Class Diagram.ucls
+/UML Class Diagram/UML Class Diagram.png
+/shellscripts/lastruncommand.sh
+/Jenkinsfile
+/src/test/resources/custom-test-data
