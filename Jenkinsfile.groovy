@@ -15,7 +15,7 @@ properties([
 // For web tests, we use the node tag 'webautomation'
 // iOS & Android tests will use 'ios-connected'
 // Note: temporarily set to windows until Mac issues are resolved
-node('master') {
+node('win_node1') {
     cleanWs()
     def mvnHome
     stage('Preparation') {
