@@ -20,7 +20,7 @@ node('win_node1') {
     def mvnHome
     stage('Preparation') {
         // Get some code from a git repository
-        git branch: 'master', url: 'https://github.com/deepakarorawins/DeeAutomationPOC.git'
+        git branch: 'ruf', url: 'https://github.com/deepakarorawins/DeeAutomationPOC.git'
 
         // Get the Maven tool.
         // ** NOTE: This 'M3' Maven tool is configured
